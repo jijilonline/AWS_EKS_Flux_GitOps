@@ -5,6 +5,9 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 ##### Install eksctl using choco
 choco install eksctl
 
+##### Install kubectl using choco
+choco install kubernetes-cli
+
 ##### Install AWS CLI after downloading - Download and run the AWS CLI MSI installer for Windows (64-bit):
 https://awscli.amazonaws.com/AWSCLIV2.msi
 
