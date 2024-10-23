@@ -24,13 +24,13 @@ Create AWS EKS clsuster
 eksctl create cluster --name fluxDemo --node-type t2.large --nodes 1 --nodes-min 1 --nodes-max 2 --region us-west-2 
 
 ## Get EKS Cluster service
-eksctl get cluster --name eksargocd --region us-west-2 
+eksctl get cluster --name fluxDemo --region us-west-2 
 
 ## Update Kubeconfig 
-aws eks update-kubeconfig --name eksargocd
+aws eks update-kubeconfig --name fluxDemo
 
 ## Get EKS Pod data.
 kubectl get pods --all-namespaces
 
 ## Delete EKS cluster
-eksctl delete cluster --name eksargocd --region us-west-2
+eksctl delete cluster --name fluxDemo --region us-west-2
