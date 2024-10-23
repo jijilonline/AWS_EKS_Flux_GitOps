@@ -22,6 +22,7 @@ Create AWS EKS clsuster
 eksctl create cluster --name fluxDemo --node-type t2.large --nodes 1 --nodes-min 1 --nodes-max 2 --region us-west-2 
 
 ##### Get EKS Cluster service
+eksctl get cluster
 eksctl get cluster --name fluxDemo --region us-west-2 
 
 ##### Update Kubeconfig 
