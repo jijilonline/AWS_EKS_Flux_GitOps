@@ -10,10 +10,8 @@ choco install kubernetes-cli
 
 ##### Install AWS CLI after downloading - Download and run the AWS CLI MSI installer for Windows (64-bit):
 https://awscli.amazonaws.com/AWSCLIV2.msi
-
 aws --version
 ####
-
 ################################################################################
 ################################################################################
 Create AWS EKS clsuster
@@ -23,14 +21,14 @@ Create AWS EKS clsuster
 ## Create EKS cluster
 eksctl create cluster --name fluxDemo --node-type t2.large --nodes 1 --nodes-min 1 --nodes-max 2 --region us-west-2 
 
-## Get EKS Cluster service
+##### Get EKS Cluster service
 eksctl get cluster --name fluxDemo --region us-west-2 
 
-## Update Kubeconfig 
+##### Update Kubeconfig 
 aws eks update-kubeconfig --name fluxDemo
 
-## Get EKS Pod data.
+##### Get EKS Pod data.
 kubectl get pods --all-namespaces
 
-## Delete EKS cluster
+##### Delete EKS cluster
 eksctl delete cluster --name fluxDemo --region us-west-2
