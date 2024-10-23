@@ -13,3 +13,24 @@ https://awscli.amazonaws.com/AWSCLIV2.msi
 
 aws --version
 ####
+
+################################################################################
+################################################################################
+Create AWS EKS clsuster
+################################################################################
+################################################################################
+
+## Create EKS cluster
+eksctl create cluster --name fluxDemo --node-type t2.large --nodes 1 --nodes-min 1 --nodes-max 2 --region us-west-2 
+
+## Get EKS Cluster service
+eksctl get cluster --name eksargocd --region us-west-2 
+
+## Update Kubeconfig 
+aws eks update-kubeconfig --name eksargocd
+
+## Get EKS Pod data.
+kubectl get pods --all-namespaces
+
+## Delete EKS cluster
+eksctl delete cluster --name eksargocd --region us-west-2
